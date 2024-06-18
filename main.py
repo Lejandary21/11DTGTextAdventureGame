@@ -1,13 +1,58 @@
 # INTRODUCTION 
+import random
 
 
-name = input("You're a peasant living in a town on the outskirts of Struht. Opportunities are yet to come for you, adventurer. You constantly dream of being at the top, the strongest, the one to inspire people.  What's your name, Adventurer?")
-print(f" As the first rays of dawn pierce through the window shutters, casting a warm glow upon the humble room, {name} awakens from a night of restless dreams. With a yawn and a stretch, they rise from their simple bed, the wooden floorboards creaking softly beneath their feet. Outside, the small town stirs to life, the sounds of roosters crowing and distant chatter filling the air. Donning their worn cloak and securing their trusty belongings, {name} steps out into the crisp morning, a sense of adventure beckoning from beyond the familiar cobblestone streets.")
-response = input(f"Or... you can just stay on your bed and keep sleeping, it's your choice, {name}. Do you want to wake up? Yes or No?")
-if response.lower() == "yes":
-    print("Good choice...")
-    input("In the hushed dawn, the user's home stirs to life. They gather provisions, a water flack,their trusty blade and their grimoire. With belongings packed and cloak donned, they bid farewell to familiar comforts. Stepping into the crisp morning air, they leave behind the safety of home, venturing forth into the unknown, ready to embrace the challenges and wonders that await on their medieval journey. Choose your magic element: Fire Magic/Bone Magic/Crystal Magic")
-elif response.lower() == "no":
-    print("You decided to slack off and stay in bed for the rest of the day. Your life becomes uneventful as you grow old.")
-else:
-    print("Invalid response. Please choose 'yes' or 'no'")
+class Room:
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+        self.exits = {}
+        self.items = {}
+    def add_exit(self, direction, room):
+        self.exits[direction] = room
+    def add_item(self, item_name, item_description):
+        self.exits[item_name] = item_description
+    def get_items(self):
+        return self.items.keys()
+    
+class Player:
+    def __init__(self, name, starting_room):
+        self.name = name
+        self.current_name = starting_room
+        self.inventory = []
+        self.magic_element = None
+        
+def move(self, direction):
+    if direction in self.current_room.exits:
+        self.current_room = self.current_room.exits[direction]
+        print("You move to the", self.current_room.name)
+        self.look_around()
+    else: 
+        print("You cannot go that way.")
+
+def look_around(self):
+    print("You are in the", self.current_room.name)
+    print(self.current_room.description)
+    if self.current_room.items:
+        print("You see the following items:")
+        for item in self.current_room.get_items():
+            print("-"), item
+
+def take_item(self, item_name):
+    if item_name in self.current_room.items:
+        self.inventory.append(item_name)
+        print("You take the", item_name)
+        del self.current_room.items[item_name]
+def inventory_status(self):
+    if self.inventory:
+        print("You are carrying:")
+        for item in self.inventory:
+            print("-"), item
+    else:
+        print("You are not carrying anything.")
+def choose_magic_element(self):
+    elements = ["Fire Magic", "Bone Magic", "Crystal Magic"]
+    self.magic_element = random.choice(elements)
+    print(f"You have chosen {self.magic_element} as your magic element")
+#The rooms
+befallen_forest = Room("Befallen Forest", "A woodland forest in the north. An ancient grimoire lies in the heart of the forest, are you bold enough to go?")
