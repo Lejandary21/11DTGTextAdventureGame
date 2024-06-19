@@ -56,3 +56,5 @@ def choose_magic_element(self):
     print(f"You have chosen {self.magic_element} as your magic element")
 #The rooms
 befallen_forest = Room("Befallen Forest", "A woodland forest in the north. An ancient grimoire lies in the heart of the forest, are you bold enough to go?")
+mystic_cave = Room("Mystic Cave", "A dark, damp cave. You can hear the faint sound of dripping water echoing through the cavern.")
+enchanted_lake = Room("Enchanted Lake", "A serene lake with water that glows softly under the moonlight")
