@@ -1,6 +1,6 @@
-# INTRODUCTION 
 import random
 
+#Variables
 
 class Room:
     def __init__(self, name, description):
@@ -56,5 +56,29 @@ def choose_magic_element(self):
     print(f"You have chosen {self.magic_element} as your magic element")
 #The rooms
 befallen_forest = Room("Befallen Forest", "A woodland forest in the north. An ancient grimoire lies in the heart of the forest, are you bold enough to go?")
-mystic_cave = Room("Mystic Cave", "A dark, damp cave. You can hear the faint sound of dripping water echoing through the cavern.")
-enchanted_lake = Room("Enchanted Lake", "A serene lake with water that glows softly under the moonlight")
+tranen_cave = Room("Tränen Cave", "A dark, damp cave. You can hear the faint sound of dripping water echoing through the cavern.")
+enchanted_lake = Room("Enchanted Lake", "A serene lake with water that glows softly under the moonlight.")
+
+#Add exits to room
+befallen_forest.add_exit("south", tranen_cave)
+tranen_cave.add_exit("North", befallen_forest)
+tranen_cave.add_exit("East", enchanted_lake)
+enchanted_lake.add_exit("West", tranen_cave)
+
+#Add items to room
+befallen_forest.add_item("Ancient Grimoire", "An old book with mysterious symbols.")
+tranen_cave.add_item("Aquamarine", "A small cluster of Aquamarine, perhaps you can sell it for a good fortune")
+enchanted_lake.add_item("Fishing spear", "It's stabbed onto the ground. Somebody may have used it before you.")
+
+# Create a player
+player = Player("Adventurer", befallen_forest)
+
+# Game loop
+player.look_around()
+player.move("South")
+player.take_item("Aquamarine")
+player.inventory_status()
+player.move("East")
+player.look_around()
+player.choose_magic_element()
+player.inventory_status()
