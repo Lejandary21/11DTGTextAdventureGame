@@ -1,84 +1,20 @@
 import random
 
-#Variables
+#FUNCTIONS
 
-class Room:
-    def __init__(self, name, description):
-        self.name = name
-        self.description = description
-        self.exits = {}
-        self.items = {}
-    def add_exit(self, direction, room):
-        self.exits[direction] = room
-    def add_item(self, item_name, item_description):
-        self.exits[item_name] = item_description
-    def get_items(self):
-        return self.items.keys()
-    
-class Player:
-    def __init__(self, name, starting_room):
-        self.name = name
-        self.current_name = starting_room
-        self.inventory = []
-        self.magic_element = None
-        
-def move(self, direction):
-    if direction in self.current_room.exits:
-        self.current_room = self.current_room.exits[direction]
-        print("You move to the", self.current_room.name)
-        self.look_around()
-    else: 
-        print("You cannot go that way.")
+# Game introduction
+def game_intro():
+    print("You're a peasant living in a town on the outskirts of Struht.")
+    print("Opportunities are yet to come for you, adventurer.")
+    print("You constantly dream of being at the top, the strongest, the one to inspire people.")
+    player_name = input("What's your name, adventurer? ")
 
-def look_around(self):
-    print("You are in the", self.current_room.name)
-    print(self.current_room.description)
-    if self.current_room.items:
-        print("You see the following items:")
-        for item in self.current_room.get_items():
-            print("-"), item
 
-def take_item(self, item_name):
-    if item_name in self.current_room.items:
-        self.inventory.append(item_name)
-        print("You take the", item_name)
-        del self.current_room.items[item_name]
-def inventory_status(self):
-    if self.inventory:
-        print("You are carrying:")
-        for item in self.inventory:
-            print("-"), item
-    else:
-        print("You are not carrying anything.")
-def choose_magic_element(self):
-    elements = ["Fire Magic", "Bone Magic", "Crystal Magic"]
-    self.magic_element = random.choice(elements)
-    print(f"You have chosen {self.magic_element} as your magic element")
-#The rooms
-befallen_forest = Room("Befallen Forest", "A woodland forest in the north. An ancient grimoire lies in the heart of the forest, are you bold enough to go?")
-tranen_cave = Room("Tränen Cave", "A dark, damp cave. You can hear the faint sound of dripping water echoing through the cavern.")
-enchanted_lake = Room("Enchanted Lake", "A serene lake with water that glows softly under the moonlight.")
 
-#Add exits to room
-befallen_forest.add_exit("south", tranen_cave)
-tranen_cave.add_exit("North", befallen_forest)
-tranen_cave.add_exit("East", enchanted_lake)
-enchanted_lake.add_exit("West", tranen_cave)
 
-#Add items to room
-befallen_forest.add_item("Ancient Grimoire", "An old book with mysterious symbols.")
-tranen_cave.add_item("Aquamarine", "A small cluster of Aquamarine, perhaps you can sell it for a good fortune")
-enchanted_lake.add_item("Fishing spear", "It's stabbed onto the ground. Somebody may have used it before you.")
+# Scenario 2
 
-# Create a player
-player = Player("Adventurer", befallen_forest)
+# MAIN CODE
 
-# Game loop
-player.look_around()
-player.move("South")
-player.take_item("Aquamarine")
-player.inventory_status()
-player.move("East")
-player.look_around()
-player.choose_magic_element()
-player.inventory_status()
+# Start the game
+# player = game_intro()
