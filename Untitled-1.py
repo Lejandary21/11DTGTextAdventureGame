@@ -9,7 +9,8 @@ def game_intro():
     print("You constantly dream of being at the top, the strongest, the one to inspire people.")
     player_name = input("What's your name, adventurer? ")
 
-
+def bad_ending ():
+    print: Dragon slays the King as his crown falls off his head down the stairs a long fall...
 
 
 # Scenario 2
