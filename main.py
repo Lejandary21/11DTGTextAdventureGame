@@ -15,6 +15,6 @@ def game_intro():
 # Scenario 2
 
 # MAIN CODE
-
+print(f"Welcome, ")
 # Start the game
 # player = game_intro()
