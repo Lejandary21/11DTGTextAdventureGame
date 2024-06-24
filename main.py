@@ -58,7 +58,7 @@ def instructions(character, equipment):
     print("  - Engage with other characters to gather information and aid.")
 
 # MAIN CODE
-
+print(f"Welcome, ")
 # Start the game
 name = game_intro()
 character, equipment = choose_character()
