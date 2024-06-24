@@ -44,10 +44,10 @@ if character == "Warrior":
 elif character == "Mage":
        print(" - You will choose")
        print("- You will choose")
-       
-def bad_ending ():
-    print: Dragon slays the King as his crown falls off his head down the stairs a long fall...
 
-print("Explore the town to find quests and challenges.")
-print("Collect items to help you on your journey.")
-        
+def bad_ending ():
+       
+        print("Dragon slays the King as his crown falls off his head down the stairs a long fall...")
+        print("Explore the town to find quests and challenges.")
+        print("Collect items to help you on your journey.")
+                
