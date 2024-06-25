@@ -49,15 +49,21 @@ elif character == "Mage":
        print("- Linen Robe")
 
 #----- The Game Starts -----
-print("You come across a 2 way path. The right side leads to the forest and the left leads to the cave. which way do you want to go?")
+print("You come across a 2 way path. The right side leads to the forest and the left leads to the cave. which way do you want to go? (Forest/Cave)")
 areaChoice = input("")
 if (areaChoice == "Forest"):
+       print("The forest it is...")
+       print("As you walk deeper into the forest, you see a statue wearing a necklace.")
+       print("Do you want to take the necklace from the statue? ")
+
+
+elif (areaChoice == "Cave"):
+       print("The cave it is...")
+       print("As you venture inside the cave, you encounter a hostile goblin.")
+       print("Do you want to fight it? Yes or No?")
+
+else:
+   print("Invalid choice. Please enter Forest or Cave.")
 
 
 
-        def bad_ending ():
-       
-                print("Dragon slays the King as his crown falls off his head down the stairs a long fall...")
-                print("Explore the town to find quests and challenges.")
-                print("Collect items to help you on your journey.")
-                
