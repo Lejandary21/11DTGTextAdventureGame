@@ -61,6 +61,7 @@ elif (areaChoice == "Cave"):
        print("The cave it is...")
        print("As you venture inside the cave, you encounter a hostile goblin.")
        print("Do you want to fight it? Yes or No?")
+       
 
 else:
    print("Invalid choice. Please enter Forest or Cave.")
