@@ -57,13 +57,13 @@ if (areaChoice == "Forest"):
        print("Do you want to take the necklace from the statue? ")
        statueChoice = input("")
 
-if (statueChoice == "Yes"):
+ if (statueChoice == "Yes"):
        print("You walk closer to the statue and slowly grabbed the necklace from the statue's neck")
        print("It's a living statue! It began moving and grabbed your neck, crushing it.")
        print("You have died.")
-elif (statueChoice == "No"):
+ elif (statueChoice == "No"):
        print("You decided to ignore it and move on.")
-else:
+ else:
        print("Invalid choice. Please enter Yes or No.")
 
 elif (areaChoice == "Cave"):
