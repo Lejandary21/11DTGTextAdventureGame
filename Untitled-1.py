@@ -43,7 +43,7 @@ if character == "Warrior":
        print("- Leather Armor")
 elif character == "Mage":
        print(" - You will choose")
-       print("- You will choose")
+       print("- You will choose") 
 
 def bad_ending ():
        
