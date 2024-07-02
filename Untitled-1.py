@@ -54,7 +54,7 @@ areaChoice = input("")
 if (areaChoice == "Forest"):
         print("The forest it is...")
         print("As you walk deeper into the forest, you see a statue wearing a necklace.")
-        print("Do you want to take the necklace from the statue? ")
+        print("Do you want to take the necklace from the statue? Yes or No? ")
         statueChoice = input("")
 
         if (statueChoice == "Yes"):
@@ -70,6 +70,19 @@ elif (areaChoice == "Cave"):
         print("The cave it is...")
         print("As you venture inside the cave, you encounter a hostile goblin.")
         print("Do you want to fight it? Yes or No?")
+        goblinChoice = input("")
+
+        if (goblinChoice == "Yes"):
+                print("The goblin charges at you but you evade it's attack and struck it from behind.")
+        elif (goblinChoice == "No"):
+                print("You shove the goblin aside and hit his head onto the rough, rigid cave wall.")
+                print("It died from head trauma.")
+                print("You made it past the dead goblin and go deeper into the cave. You come across 2 way path.")
+                print("The left side is dark and cold. The right side seems to have light emitting from it. Where do you want to go? Left or Right?")
+                caveChoice = input("")
+                
+        else:
+                print("Invalid choice. Please enter Yes or No. (Run the game again to retry)")
        
 
 else:
